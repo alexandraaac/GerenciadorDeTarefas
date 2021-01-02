@@ -23,17 +23,17 @@
 			<fieldset class="dois">
 				<legend> Prioridade </legend>
 				<label>
-					<input type="radio" name="prioridade" value="baixa" checked />
+					<input type="radio" name="prioridade" value="1" checked />
 					Baixa
-					<input type="radio" name="prioridade" value="media" checked />
+					<input type="radio" name="prioridade" value="2" checked />
 					Média
-					<input type="radio" name="prioridade" value="alta" checked />
+					<input type="radio" name="prioridade" value="3" checked />
 					Alta
 				</label>
 			</fieldset>
 			<label>
 				Tarefa Concluida:
-				<input type="checkbox" name="concluida" value="sim">
+				<input type="checkbox" name="concluida" value="1">
 			</label>
 			<input type="submit" name="Cadastrar">
 		</fieldset>
@@ -50,9 +50,9 @@
 			<tr>
 				<td><?php echo $tarefa['nome']; ?></td>
 				<td><?php echo $tarefa['descricao']; ?></td>
-				<td><?php echo $tarefa['prazo']; ?></td>
-				<td><?php echo $tarefa['prioridade']; ?></td>
-				<td><?php echo $tarefa['concluida']; ?></td>
+				<td><?php echo traduz_data_bd($tarefa['prazo']); ?></td>
+				<td><?php echo traduz_prioridade($tarefa['prioridade']); ?></td>
+				<td><?php echo traduz_concluida($tarefa['concluida']); ?></td>
 
 			</tr>
 		<?php endforeach ?>
