@@ -1,5 +1,5 @@
 <?php
-$bdServidor = '127.0.0.1';
+$bdServidor = '';
 $bdUsuario = 'raiz';
 $bdSenha = 'a483448833';
 $bdBanco = 'tarefas';
